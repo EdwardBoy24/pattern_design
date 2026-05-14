@@ -1,0 +1,108 @@
+/*  Variables de Color (Tema Oscuro)  */
+:root {
+    --fondo-general: #121212;
+    --fondo-cajitas: #1e1e1e;
+    --letras-blancas: #ffffff;
+    --letras-grises: #b3b3b3;
+    --color-boton: #e50914; 
+}
+
+/* Reseteo básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*  Fondo de la página  */
+body {
+    background-color: var(--fondo-general);
+    color: var(--letras-blancas);
+    /* Estas 3 líneas centran el formulario perfectamente en el medio de la pantalla */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+}
+
+/*  La caja principal del formulario  */
+main {
+    background-color: var(--fondo-cajitas);
+    padding: 40px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px; 
+    text-align: center;
+    border: 1px solid #333;
+}
+
+h2 {
+    color: var(--letras-blancas);
+    margin-bottom: 5px;
+}
+
+main > p {
+    color: var(--letras-grises);
+    font-size: 0.9em;
+    margin-bottom: 25px;
+}
+
+/*  Alineación del texto dentro del formulario  */
+form {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    color: var(--letras-grises);
+    font-size: 0.9em;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+/*  Diseño de las cajas de texto */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background-color: #2a2a2a;
+    color: white;
+    margin-top: 5px;
+}
+
+/*  Diseño para los botones de género (Radio)  */
+.grupo-radios {
+    display: flex;
+    gap: 15px; /* Separa las opciones */
+    margin-top: 5px;
+}
+
+/* Botones principales  */
+button {
+    background-color: var(--color-boton);
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 15px;
+    width: 100%; /* Hace que el botón ocupe todo el ancho */
+}
+
+/* Ocultar los saltos de línea <br> ya que el CSS ahora hace el espaciado automáticamente */
+br {
+    display: none;
+}
+
+/* Enlaces de abajo (Cambiar de Login a Register)  */
+a {
+    color: var(--color-boton);
+    text-decoration: none;
+    font-weight: bold;
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle de Pelicula | PixelCinema</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🎬 PixelCinema</h1>
+        <nav>
+            <a href="index.html">← Volver al Inicio</a>
+        </nav>
+    </header>
+
+    <main class="centro-detalles"> <!-- contenido principal centrado -->
+        <section class="info-junta"> <!-- seccion con la info de la peli -->
+            <img src="imagenes/mario-pelicula.png" alt="Poster grande de Mario Bros" class="foto-grande"> <!-- imagen grande de la peli -->
+            
+            <div class="detalles-texto"> 
+                <h2>Mario Bros: La Película</h2> <!-- subtitulo con nombre -->
+                <span class="nota-estrellas">⭐ 9.2 / 10</span> 
+                
+                <p><strong>Sinopsis:</strong> Los hermanos Mario y Luigi se ven succionados por una tubería misteriosa que los transporta a un universo mágico. donde se encuentra el temible Bowser, el líder de los Koopas que busca dominar el mundo. Para rescatar a su hermano, Mario deberá unir fuerzas con la Princesa Peach y el valiente Toad. Juntos, se embarcarán en una aventura épica llena de karts, plataformas y Power-Ups.</p> <!-- parrafo con la sinopsis -->  
+                <p><strong>Director:</strong> Aaron Horvath / Michael Jelenic</p> 
+                <p><strong>Año:</strong> 2023</p> 
+            </div>
+        </section>
+
+        <hr> <!-- linea divisoria -->
+
+        <section class="zona-comentarios"> <!-- seccion para comentarios -->
+            <h3>Deja tu reseña</h3> 
+            
+            <form class="formulario-comentarios" action="#" method="POST"> <!-- aquí empieza el formulario para dejar tu reseña -->
+                <fieldset class="marco-formulario"> <!-- como un marco que agrupa todas las preguntas -->
+                    <legend class="titulo-formulario">Tu Opinión Importante</legend> <!-- título del formulario -->
+
+                    <div class="cajita-pregunta"> <!-- primera pregunta -->
+                        <label for="apodo">Apodo:</label> <!-- etiqueta para el nombre -->
+                        <input type="text" id="apodo" name="apodo_usuario" placeholder="Ej: Cinéfilo99" pattern="[A-Za-z0-9_]+" required> <!-- campo donde escribes tu apodo -->
+                    </div>
+
+                    <div class="cajita-pregunta"> <!-- segunda pregunta -->
+                        <label for="pais">¿Desde dónde nos visitas?</label> <!-- pregunta del pais -->
+                        <select id="pais" name="pais_usuario" class="selector-desplegable" required> <!-- menu desplegable para elegir país -->
+                            <option value="" disabled selected>Selecciona tu país...</option>
+                            <option value="chile">Chile</option>
+                            <option value="argentina">Argentina</option>
+                            <option value="mexico">México</option>
+                        </select>
+                    </div>
+
+                    <div class="cajita-pregunta"> <!-- tercera pregunta -->
+                        <label>¿Recomendarías esta película a un amigo?</label> 
+                        <div class="grupo-radios"> <!-- opciones tipo radio -->
+                            <label><input type="radio" name="recomendacion" value="si" checked> Sí, totalmente</label>
+                            <label><input type="radio" name="recomendacion" value="no"> No</label>
+                        </div>
+                    </div>
+
+                    <div class="cajita-pregunta"> <!-- cuarta pregunta -->
+                        <label for="valoracion">Valoración (1 al 10):</label> 
+                        <input type="number" id="valoracion" name="nota_pelicula" min="1" max="10" value="10" required> <!-- campo numérico para poner nota -->
+                    </div>
+
+                    <div class="cajita-pregunta"> <!-- quinta pregunta -->
+                        <label for="comentario">Comentario:</label> <!-- etiqueta para comentario -->
+                        <textarea id="comentario" name="comentario_texto" rows="4" placeholder="¿Qué te pareció la película?" required></textarea> <!-- caja de texto para escribir la opinión -->
+                    </div>
+
+                    <div class="grupo-botones"> <!-- botones del formulario -->
+                        <button type="submit" class="boton-mandar">Publicar Reseña</button> <!-- botón para enviar -->
+                        <button type="reset" class="boton-limpiar">Limpiar Formulario</button> <!-- botón para borrar todo -->
+                    </div>
+                </fieldset>
+            </form> <!-- aquí termina el formulario -->
+
+            <div class="zona-comentarios"> <!-- zona donde aparecen comentarios -->
+                <div class="comentario-usuario"> <!-- comentario de un usuario -->
+                    <div class="nombre-y-nota">
+                        <strong>NoobMaster69</strong> 
+                        <span class="nota-usuario">⭐ 9/10</span>
+                    </div>
+                    <p>Una aventura divertida llena de nostalgia. Muy recomendada.</p>
+                </div>
+
+                <div class="comentario-usuario"> 
+                    <div class="nombre-y-nota">
+                        <strong>Catita_32</strong> 
+                        <span class="nota-usuario">⭐ 8/10</span>
+                    </div>
+                    <p>Maravillosa pelicula para ver con los niños y la familia en general.</p>
+                </div>
+
+                <div class="comentario-usuario"> 
+                    <div class="nombre-y-nota">
+                        <strong>HaterEnvidioso19</strong> 
+                        <span class="nota-usuario">⭐ 3/10</span>
+                    </div>
+                    <p>Pelicula generica y sin alma, creo que solo le puede gustar a los niños tontos.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle de Película | PixelCinema</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🎬 PixelCinema</h1>
+        <nav>
+            <a href="index.html">← Volver al Inicio</a>
+        </nav>
+    </header>
+
+    <main class="centro-detalles"> 
+        <section class="info-junta"> 
+            <img src="imagenes/sonic1-pelicula.png" alt="Poster grande de Sonic La Pelicula" class="foto-grande"> 
+            
+            <div class="detalles-texto"> 
+                <h2>Sonic: La película</h2> <!-- título -->
+                <span class="nota-estrellas">⭐ 8.2 / 10</span> 
+                
+                <p><strong>Sinopsis:</strong> Sonic intenta atravesar las complejidades de la vida en la Tierra con su nuevo mejor amigo, un humano llamado Tom Wachowski. Deberán unir sus fuerzas para evitar que el malvado Dr. Robotnik capture a Sonic y use sus poderes para dominar el mundo.</p> <!-- sinopsis -->
+                <p><strong>Director:</strong> Jeff Fowler</p> 
+                <p><strong>Año:</strong> 2020</p> 
+            </div>
+        </section>
+
+        <hr> <!-- línea divisoria -->
+
+        <section class="zona-comentarios"> 
+            <h3>Deja tu reseña</h3> 
+            
+            <form class="formulario-comentarios" action="#" method="POST">
+                <fieldset class="marco-formulario">
+                    <legend class="titulo-formulario">Tu Opinión Importante</legend>
+
+                    <div class="cajita-pregunta">
+                        <label for="apodo">Apodo:</label>
+                        <input type="text" id="apodo" name="apodo_usuario" placeholder="Ej: Cinéfilo99" pattern="[A-Za-z0-9_]+" required>
+                    </div>
+
+                    <div class="cajita-pregunta">
+                        <label for="pais">¿Desde dónde nos visitas?</label>
+                        <select id="pais" name="pais_usuario" class="selector-desplegable" required>
+                            <option value="" disabled selected>Selecciona tu país...</option>
+                            <option value="chile">Chile</option>
+                            <option value="argentina">Argentina</option>
+                            <option value="mexico">México</option>
+                        </select>
+                    </div>
+
+                    <div class="cajita-pregunta">
+                        <label>¿Recomendarías esta película a un amigo?</label>
+                        <div class="grupo-radios">
+                            <label><input type="radio" name="recomendacion" value="si" checked> Sí, totalmente</label>
+                            <label><input type="radio" name="recomendacion" value="no"> No</label>
+                        </div>
+                    </div>
+
+                    <div class="cajita-pregunta">
+                        <label for="valoracion">Valoración (1 al 10):</label>
+                        <input type="number" id="valoracion" name="nota_pelicula" min="1" max="10" value="10" required>
+                    </div>
+
+                    <div class="cajita-pregunta">
+                        <label for="comentario">Comentario:</label>
+                        <textarea id="comentario" name="comentario_texto" rows="4" placeholder="¿Qué te pareció la película?" required></textarea>
+                    </div>
+
+                    <div class="grupo-botones">
+                        <button type="submit" class="boton-mandar">Publicar Reseña</button>
+                        <button type="reset" class="boton-limpiar">Limpiar Formulario</button>
+                    </div>
+                </fieldset>
+            </form>
+
+            <div class="zona-comentarios"> <!-- sección para comentarios -->
+                <div class="comentario-usuario"> 
+                    <div class="nombre-y-nota">
+                        <strong>Helencita</strong> 
+                        <span class="nota-usuario">⭐ 7/10</span>
+                    </div>
+                    <p>Bonita película, la fui a ver con mi novio al cine y nos hizo reír mucho con las ocurrencias del erizo azul.</p> 
+                </div>
+
+                <div class="comentario-usuario"> 
+                    <div class="nombre-y-nota">
+                        <strong>Cinefilo_gourmet23</strong> 
+                        <span class="nota-usuario">⭐ 3/10</span>
+                    </div>
+                    <p>Es verdaderamente lamentable el estado actual de la industria de Hollywood. Fui a ver esta mal llamada 'obra cinematográfica' esperando encontrar, si no un guion profundo, al menos un mínimo de respeto por la narrativa visual. Lo que obtuve fue un comercial de comida rápida de casi dos horas disfrazado del cliché más perezoso del cine: el road trip genérico de un humano y una criatura generada por computadora.</p> 
+                </div>
+
+                <div class="comentario-usuario"> 
+                    <div class="nombre-y-nota">
+                        <strong>Edward_25</strong> 
+                        <span class="nota-usuario">⭐ 5/10</span>
+                    </div>
+                    <p>Una película mediocre y del montón, lo único rescatable es el diseño bien elaborado de Sonic.</p> 
+                </div>
+
+                <div class="comentario-usuario"> 
+                    <div class="nombre-y-nota">
+                        <strong>Profe_yerald36</strong> 
+                        <span class="nota-usuario">⭐ 8/10</span>
+                    </div>
+                    <p>¡Qué viaje a la nostalgia! Como alguien que gastó sus pulgares jugando al Sonic 1 y 2 en la vieja Sega Genesis conectada a un televisor de tubo, esta película me sacó una sonrisa de oreja a oreja. Fui al cine con mis sobrinos sin esperar una obra maestra, ¡y salí súper contento! Me encantó cómo capturaron la personalidad de Sonic: rebelde, acelerado pero con un corazón de oro. Los guiños a los videojuegos están puestos con mucho cariño, desde los anillos hasta la famosa zona de Green Hill. Y por favor, ¡hay que aplaudir a Jim Carrey! Nos dio a un Doctor Robotnik (o Eggman, para los de la vieja escuela jeje) tan alocado y carismático como el de los juegos de los 90.</p> 
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
