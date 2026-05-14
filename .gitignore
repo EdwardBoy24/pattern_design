@@ -1,0 +1,41 @@
+gitignore# Compiled class files
+*.class
+
+# Log files
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# IDEs (IntelliJ, Eclipse, NetBeans)
+.idea/
+*.iml
+*.iws
+.settings/
+.project
+.classpath
+.metadata/
+nbproject/private/
+nbbuild/
+dist/
+nbdist/
+
+# Build tools (Maven/Gradle)
+target/
+build/
+.gradle/
+
+# OS files
+.DS_Store
+Thumbs.db
